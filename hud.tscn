@@ -3,12 +3,10 @@
 [ext_resource type="Script" uid="uid://bnemm663erta" path="res://HUD.cs" id="1_8sq4i"]
 [ext_resource type="Texture2D" uid="uid://bik2ytrjy8h25" path="res://Assets/tank_blue.png" id="1_64ctp"]
 [ext_resource type="FontFile" uid="uid://tvmrayww2tjh" path="res://Assets/Fonts/Kenney Future.ttf" id="2_8sq4i"]
-[ext_resource type="PackedScene" uid="uid://crlvhrwo0gfpv" path="res://main.tscn" id="2_640wx"]
 
 [node name="HUD" type="CanvasLayer"]
 process_mode = 3
 script = ExtResource("1_8sq4i")
-MainScene = ExtResource("2_640wx")
 
 [node name="TankTexture" type="TextureRect" parent="."]
 offset_left = 16.0

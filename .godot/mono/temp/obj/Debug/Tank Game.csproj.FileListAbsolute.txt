@@ -15,3 +15,4 @@ C:\Users\NyleT\OneDrive\Documents\Godot\tank-game\.godot\mono\temp\obj\Debug\ref
 C:\Users\NyleT\OneDrive\Documents\Godot\tank-game\.godot\mono\temp\obj\Debug\Tank Game.pdb
 C:\Users\NyleT\OneDrive\Documents\Godot\tank-game\.godot\mono\temp\obj\Debug\Tank Game.genruntimeconfig.cache
 C:\Users\NyleT\OneDrive\Documents\Godot\tank-game\.godot\mono\temp\obj\Debug\ref\Tank Game.dll
+C:\Users\NyleT\OneDrive\Documents\Godot\tank-game\.godot\mono\temp\obj\Debug\Tank Game.sourcelink.json
