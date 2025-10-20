@@ -1,0 +1,73 @@
+[gd_scene load_steps=15 format=3 uid="uid://2gd3ctwwrk63"]
+
+[ext_resource type="PackedScene" uid="uid://047bclugwlmj" path="res://tank.tscn" id="1_ga7xl"]
+[ext_resource type="Script" uid="uid://ftmnje86mkd2" path="res://ChasingEnemy.cs" id="2_b4h8b"]
+[ext_resource type="PackedScene" uid="uid://bdoim84x22acf" path="res://explosion.tscn" id="3_4bdcf"]
+[ext_resource type="Texture2D" uid="uid://d3h62a7g82y6c" path="res://Assets/Red Tank Animation/sprite_0.png" id="4_gkb3f"]
+[ext_resource type="Texture2D" uid="uid://b4oid64ow83wx" path="res://Assets/Red Tank Animation/sprite_1.png" id="5_u8dkp"]
+[ext_resource type="Texture2D" uid="uid://nieeaymcrsb2" path="res://Assets/Red Tank Animation/sprite_2.png" id="6_4k2cb"]
+[ext_resource type="Texture2D" uid="uid://bxfwnr16vjq0d" path="res://Assets/Red Tank Animation/sprite_3.png" id="7_io620"]
+[ext_resource type="Texture2D" uid="uid://btrm2yobnqv5r" path="res://Assets/Red Tank Animation/sprite_4.png" id="8_o71dc"]
+[ext_resource type="Texture2D" uid="uid://qgmr8uspm0fo" path="res://Assets/Red Tank Animation/sprite_5.png" id="9_dmnb1"]
+[ext_resource type="Texture2D" uid="uid://cct1xpwqtcw5h" path="res://Assets/Red Tank Animation/sprite_6.png" id="10_5u25t"]
+[ext_resource type="Texture2D" uid="uid://cnas6rvdh6saf" path="res://Assets/Red Tank Animation/sprite_7.png" id="11_goso0"]
+[ext_resource type="Texture2D" uid="uid://mtg64ulbjeh1" path="res://Assets/specialBarrel2_outline.png" id="12_h2ul6"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dyjg1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_gkb3f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_u8dkp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_4k2cb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_io620")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_o71dc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_dmnb1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_5u25t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_goso0")
+}],
+"loop": true,
+"name": &"drive",
+"speed": 24.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gkb3f"]
+radius = 31.06445
+
+[node name="ChasingEnemy" groups=["enemy"] instance=ExtResource("1_ga7xl")]
+script = ExtResource("2_b4h8b")
+BulletScene = null
+ExplosionScene = ExtResource("3_4bdcf")
+MoveSpeed = 100.0
+
+[node name="TankBody" parent="." index="0"]
+rotation = -1.5707964
+sprite_frames = SubResource("SpriteFrames_dyjg1")
+animation = &"drive"
+speed_scale = 0.5
+
+[node name="CollisionShape2D" parent="." index="1"]
+rotation = -1.5707964
+shape = SubResource("CircleShape2D_gkb3f")
+
+[node name="GunPivot" parent="." index="2"]
+rotation = -1.5707964
+
+[node name="Gun" parent="GunPivot" index="0" groups=["enemy"]]
+rotation = -1.5707964
+texture = ExtResource("12_h2ul6")
+offset = Vector2(0, 20)

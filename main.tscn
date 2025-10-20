@@ -1,0 +1,15 @@
+[gd_scene load_steps=6 format=3 uid="uid://crlvhrwo0gfpv"]
+
+[ext_resource type="Script" uid="uid://c5v5s5si1ayfo" path="res://Main.cs" id="1_7mycd"]
+[ext_resource type="PackedScene" uid="uid://deod25ggls10m" path="res://level1.tscn" id="2_h2yge"]
+[ext_resource type="PackedScene" uid="uid://cat3mqobppwjn" path="res://level2.tscn" id="3_lquwl"]
+[ext_resource type="PackedScene" uid="uid://dkr32udpjxciu" path="res://level3.tscn" id="4_7mycd"]
+[ext_resource type="PackedScene" uid="uid://ckg16d2mrljc7" path="res://title_screen.tscn" id="5_lquwl"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_7mycd")
+Level1Scene = ExtResource("2_h2yge")
+Level2Scene = ExtResource("3_lquwl")
+Level3Scene = ExtResource("4_7mycd")
+
+[node name="TitleScreen" parent="." instance=ExtResource("5_lquwl")]

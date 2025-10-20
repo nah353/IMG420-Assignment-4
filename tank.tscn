@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://047bclugwlmj"]
+
+[ext_resource type="Script" uid="uid://c0bryf3heknwq" path="res://Tank.cs" id="1_6lwfj"]
+[ext_resource type="PackedScene" uid="uid://dkvcyas7mn1oq" path="res://player_bullet.tscn" id="2_1ealj"]
+[ext_resource type="AudioStream" uid="uid://dxq76e8yq3vtf" path="res://Assets/Audio/sound_normalexplosion3.wav" id="3_yfqcd"]
+
+[node name="Tank" type="CharacterBody2D"]
+script = ExtResource("1_6lwfj")
+BulletScene = ExtResource("2_1ealj")
+
+[node name="TankBody" type="AnimatedSprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="GunPivot" type="Node2D" parent="."]
+
+[node name="Gun" type="Sprite2D" parent="GunPivot"]
+
+[node name="Muzzle" type="Marker2D" parent="GunPivot/Gun"]
+
+[node name="GunCooldownTimer" type="Timer" parent="."]
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+path_postprocessing = 1
+debug_path_custom_color = Color(1, 0, 0, 1)
+
+[node name="ShootSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_yfqcd")
+volume_db = -24.0

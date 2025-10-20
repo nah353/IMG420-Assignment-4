@@ -1,0 +1,70 @@
+[gd_scene load_steps=14 format=3 uid="uid://ciyxl0i1lx7ud"]
+
+[ext_resource type="PackedScene" uid="uid://047bclugwlmj" path="res://tank.tscn" id="1_dxifv"]
+[ext_resource type="Script" uid="uid://kglhbc56ryuq" path="res://StationaryEnemy.cs" id="2_n0g06"]
+[ext_resource type="Texture2D" uid="uid://d3h62a7g82y6c" path="res://Assets/Red Tank Animation/sprite_0.png" id="2_pwjut"]
+[ext_resource type="Texture2D" uid="uid://b4oid64ow83wx" path="res://Assets/Red Tank Animation/sprite_1.png" id="3_n0g06"]
+[ext_resource type="Texture2D" uid="uid://nieeaymcrsb2" path="res://Assets/Red Tank Animation/sprite_2.png" id="4_ar8e5"]
+[ext_resource type="Texture2D" uid="uid://bxfwnr16vjq0d" path="res://Assets/Red Tank Animation/sprite_3.png" id="5_doop2"]
+[ext_resource type="Texture2D" uid="uid://btrm2yobnqv5r" path="res://Assets/Red Tank Animation/sprite_4.png" id="6_5hcft"]
+[ext_resource type="Texture2D" uid="uid://qgmr8uspm0fo" path="res://Assets/Red Tank Animation/sprite_5.png" id="7_nnovl"]
+[ext_resource type="Texture2D" uid="uid://cct1xpwqtcw5h" path="res://Assets/Red Tank Animation/sprite_6.png" id="8_jmwgi"]
+[ext_resource type="Texture2D" uid="uid://cnas6rvdh6saf" path="res://Assets/Red Tank Animation/sprite_7.png" id="9_g2u8i"]
+[ext_resource type="Texture2D" uid="uid://ch3s1x0wf4466" path="res://Assets/tankRed_barrel3_outline.png" id="10_dxifv"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pwjut"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_pwjut")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_n0g06")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ar8e5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_doop2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_5hcft")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_nnovl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_jmwgi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_g2u8i")
+}],
+"loop": true,
+"name": &"drive",
+"speed": 24.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dxifv"]
+radius = 34.0
+height = 80.0
+
+[node name="StationaryEnemy" instance=ExtResource("1_dxifv")]
+rotation = -3.1415927
+script = ExtResource("2_n0g06")
+metadata/_edit_group_ = true
+
+[node name="TankBody" parent="." index="0"]
+sprite_frames = SubResource("SpriteFrames_pwjut")
+animation = &"drive"
+frame = 5
+frame_progress = 0.39611894
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(0.5, 0)
+shape = SubResource("CapsuleShape2D_dxifv")
+
+[node name="Gun" parent="GunPivot" index="0"]
+rotation = -1.5707964
+scale = Vector2(0.8, 1.2)
+texture = ExtResource("10_dxifv")
+offset = Vector2(0, 30)

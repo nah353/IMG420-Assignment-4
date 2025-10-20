@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://d0u1hhb5s8dea"]
+
+[ext_resource type="Texture2D" uid="uid://b3sr1xiwpn6b4" path="res://Assets/Particles/Explosion01-nofire_5x5.tga" id="1_d1ili"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_niign"]
+particles_animation = true
+particles_anim_h_frames = 5
+particles_anim_v_frames = 5
+particles_anim_loop = false
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ca0x4"]
+particle_flag_disable_z = true
+emission_shape_offset = Vector3(0, -20, 0)
+gravity = Vector3(0, 98, 0)
+scale_min = 0.29999998
+scale_max = 0.29999998
+anim_speed_min = 1.0
+anim_speed_max = 1.0
+
+[node name="Smoke" type="GPUParticles2D"]
+modulate = Color(0.80473757, 0.10544465, 1.92523e-07, 1)
+z_index = 1
+material = SubResource("CanvasItemMaterial_niign")
+position = Vector2(0, -4)
+emitting = false
+amount = 1
+texture = ExtResource("1_d1ili")
+one_shot = true
+local_coords = true
+process_material = SubResource("ParticleProcessMaterial_ca0x4")

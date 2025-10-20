@@ -1,0 +1,220 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0": {
+      "Godot.SourceGenerators/4.5.0-beta.1": {
+        "type": "package",
+        "build": {
+          "build/Godot.SourceGenerators.props": {}
+        }
+      },
+      "GodotSharp/4.5.0-beta.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/GodotSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/GodotSharp.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "GodotSharpEditor/4.5.0-beta.1": {
+        "type": "package",
+        "dependencies": {
+          "GodotSharp": "4.5.0-beta.1"
+        },
+        "compile": {
+          "lib/net8.0/GodotSharpEditor.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/GodotSharpEditor.dll": {
+            "related": ".xml"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Godot.SourceGenerators/4.5.0-beta.1": {
+      "sha512": "WIowJn+KcpYhun0gCqxRiTrds5dI4FlqrdjVk2aK/2TuoZiN8L7y+083n5b7owH/bY/HcrdKY1ZKa/cBeId65Q==",
+      "type": "package",
+      "path": "godot.sourcegenerators/4.5.0-beta.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "analyzers/dotnet/cs/Godot.SourceGenerators.dll",
+        "build/Godot.SourceGenerators.props",
+        "godot.sourcegenerators.4.5.0-beta.1.nupkg.sha512",
+        "godot.sourcegenerators.nuspec"
+      ]
+    },
+    "GodotSharp/4.5.0-beta.1": {
+      "sha512": "ThBaT5IZWNIDAt6C2yHFe5TTG2lltP++GA0ee4jvbEVwwxW7+mIBYMZCAc+XY3n7oa0qHOAoNm9VnEE5N97bWQ==",
+      "type": "package",
+      "path": "godotsharp/4.5.0-beta.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "godotsharp.4.5.0-beta.1.nupkg.sha512",
+        "godotsharp.nuspec",
+        "lib/net8.0/GodotSharp.dll",
+        "lib/net8.0/GodotSharp.xml"
+      ]
+    },
+    "GodotSharpEditor/4.5.0-beta.1": {
+      "sha512": "wUHwpakFr57opUSvyyOOnUAh8K4qogryZqp5UazVZ9/fsZ2We82SC+6c7Q98L3Zlk/bSy/jcYYnSiSoEu6KJKw==",
+      "type": "package",
+      "path": "godotsharpeditor/4.5.0-beta.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "godotsharpeditor.4.5.0-beta.1.nupkg.sha512",
+        "godotsharpeditor.nuspec",
+        "lib/net8.0/GodotSharpEditor.dll",
+        "lib/net8.0/GodotSharpEditor.xml"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0": [
+      "Godot.SourceGenerators >= 4.5.0-beta",
+      "GodotSharp >= 4.5.0-beta",
+      "GodotSharpEditor >= 4.5.0-beta"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\NyleT\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\NyleT\\OneDrive\\Documents\\Godot\\tank-game\\Tank Game.csproj",
+      "projectName": "Tank Game",
+      "projectPath": "C:\\Users\\NyleT\\OneDrive\\Documents\\Godot\\tank-game\\Tank Game.csproj",
+      "packagesPath": "C:\\Users\\NyleT\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\NyleT\\OneDrive\\Documents\\Godot\\tank-game\\.godot\\mono\\temp\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\NyleT\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.300"
+    },
+    "frameworks": {
+      "net8.0": {
+        "targetAlias": "net8.0",
+        "dependencies": {
+          "Godot.SourceGenerators": {
+            "target": "Package",
+            "version": "[4.5.0-beta, )",
+            "autoReferenced": true
+          },
+          "GodotSharp": {
+            "target": "Package",
+            "version": "[4.5.0-beta, )",
+            "autoReferenced": true
+          },
+          "GodotSharpEditor": {
+            "target": "Package",
+            "version": "[4.5.0-beta, )",
+            "autoReferenced": true
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[8.0.19, 8.0.19]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[8.0.19, 8.0.19]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[8.0.19, 8.0.19]"
+          }
+        ],
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  },
+  "logs": [
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Tank Game depends on Godot.SourceGenerators (>= 4.5.0-beta) but Godot.SourceGenerators 4.5.0-beta was not found. Godot.SourceGenerators 4.5.0-beta.1 was resolved instead.",
+      "libraryId": "Godot.SourceGenerators",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Tank Game depends on GodotSharp (>= 4.5.0-beta) but GodotSharp 4.5.0-beta was not found. GodotSharp 4.5.0-beta.1 was resolved instead.",
+      "libraryId": "GodotSharp",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Tank Game depends on GodotSharpEditor (>= 4.5.0-beta) but GodotSharpEditor 4.5.0-beta was not found. GodotSharpEditor 4.5.0-beta.1 was resolved instead.",
+      "libraryId": "GodotSharpEditor",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+[gd_scene load_steps=2 format=3 uid="uid://ckg16d2mrljc7"]
+
+[ext_resource type="FontFile" uid="uid://tvmrayww2tjh" path="res://Assets/Fonts/Kenney Future.ttf" id="1_v6p8y"]
+
+[node name="TitleScreen" type="CanvasLayer"]
+
+[node name="Background" type="ColorRect" parent="."]
+offset_right = 1408.0
+offset_bottom = 896.0
+color = Color(0.98479134, 0.91660863, 0.5260716, 1)
+
+[node name="TitleText" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -515.0
+offset_top = -296.0
+offset_right = 515.0
+offset_bottom = -134.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 48
+theme_override_fonts/font = ExtResource("1_v6p8y")
+theme_override_font_sizes/font_size = 144
+text = "Tank Game"
+
+[node name="ButtonContainer" type="VBoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -188.85419
+offset_top = -58.0
+offset_right = 188.85419
+offset_bottom = 312.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 48
+
+[node name="Level1" type="Button" parent="ButtonContainer"]
+modulate = Color(0.1996471, 0.84551555, 0, 1)
+layout_mode = 2
+theme_override_constants/outline_size = 16
+theme_override_fonts/font = ExtResource("1_v6p8y")
+theme_override_font_sizes/font_size = 64
+text = "Level 1"
+
+[node name="Level2" type="Button" parent="ButtonContainer"]
+modulate = Color(0.28067023, 0.6676196, 0.8868452, 1)
+layout_mode = 2
+theme_override_constants/outline_size = 16
+theme_override_fonts/font = ExtResource("1_v6p8y")
+theme_override_font_sizes/font_size = 64
+text = "Level 2"
+
+[node name="Level3" type="Button" parent="ButtonContainer"]
+modulate = Color(0.78179413, 0.14402789, 0.13436338, 1)
+layout_mode = 2
+theme_override_constants/outline_size = 16
+theme_override_fonts/font = ExtResource("1_v6p8y")
+theme_override_font_sizes/font_size = 64
+text = "Level 3
+"

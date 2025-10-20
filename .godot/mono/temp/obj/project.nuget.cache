@@ -1,0 +1,52 @@
+{
+  "version": 2,
+  "dgSpecHash": "39CmzIjlnPc=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\NyleT\\OneDrive\\Documents\\Godot\\tank-game\\Tank Game.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\NyleT\\.nuget\\packages\\godot.sourcegenerators\\4.5.0-beta.1\\godot.sourcegenerators.4.5.0-beta.1.nupkg.sha512",
+    "C:\\Users\\NyleT\\.nuget\\packages\\godotsharp\\4.5.0-beta.1\\godotsharp.4.5.0-beta.1.nupkg.sha512",
+    "C:\\Users\\NyleT\\.nuget\\packages\\godotsharpeditor\\4.5.0-beta.1\\godotsharpeditor.4.5.0-beta.1.nupkg.sha512",
+    "C:\\Users\\NyleT\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.19\\microsoft.netcore.app.ref.8.0.19.nupkg.sha512",
+    "C:\\Users\\NyleT\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.19\\microsoft.windowsdesktop.app.ref.8.0.19.nupkg.sha512",
+    "C:\\Users\\NyleT\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.19\\microsoft.aspnetcore.app.ref.8.0.19.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "message": "Tank Game depends on Godot.SourceGenerators (>= 4.5.0-beta) but Godot.SourceGenerators 4.5.0-beta was not found. Godot.SourceGenerators 4.5.0-beta.1 was resolved instead.",
+      "projectPath": "C:\\Users\\NyleT\\OneDrive\\Documents\\Godot\\tank-game\\Tank Game.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\NyleT\\OneDrive\\Documents\\Godot\\tank-game\\Tank Game.csproj",
+      "libraryId": "Godot.SourceGenerators",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "message": "Tank Game depends on GodotSharp (>= 4.5.0-beta) but GodotSharp 4.5.0-beta was not found. GodotSharp 4.5.0-beta.1 was resolved instead.",
+      "projectPath": "C:\\Users\\NyleT\\OneDrive\\Documents\\Godot\\tank-game\\Tank Game.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\NyleT\\OneDrive\\Documents\\Godot\\tank-game\\Tank Game.csproj",
+      "libraryId": "GodotSharp",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "message": "Tank Game depends on GodotSharpEditor (>= 4.5.0-beta) but GodotSharpEditor 4.5.0-beta was not found. GodotSharpEditor 4.5.0-beta.1 was resolved instead.",
+      "projectPath": "C:\\Users\\NyleT\\OneDrive\\Documents\\Godot\\tank-game\\Tank Game.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\NyleT\\OneDrive\\Documents\\Godot\\tank-game\\Tank Game.csproj",
+      "libraryId": "GodotSharpEditor",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
+}

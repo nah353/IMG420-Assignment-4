@@ -1,0 +1,75 @@
+[gd_scene load_steps=16 format=3 uid="uid://bky5lr26sfm6s"]
+
+[ext_resource type="PackedScene" uid="uid://047bclugwlmj" path="res://tank.tscn" id="1_x4pat"]
+[ext_resource type="Script" uid="uid://cl68vvxgj2kh8" path="res://PatrollingEnemy.cs" id="2_1l6ky"]
+[ext_resource type="Texture2D" uid="uid://d3h62a7g82y6c" path="res://Assets/Red Tank Animation/sprite_0.png" id="2_dgya6"]
+[ext_resource type="Texture2D" uid="uid://b4oid64ow83wx" path="res://Assets/Red Tank Animation/sprite_1.png" id="3_1l6ky"]
+[ext_resource type="PackedScene" uid="uid://bck0jdtpqbpfc" path="res://stationary_enemy_bullet.tscn" id="3_avjaq"]
+[ext_resource type="Texture2D" uid="uid://nieeaymcrsb2" path="res://Assets/Red Tank Animation/sprite_2.png" id="4_kbuht"]
+[ext_resource type="PackedScene" uid="uid://bdoim84x22acf" path="res://explosion.tscn" id="4_ubeem"]
+[ext_resource type="Texture2D" uid="uid://bxfwnr16vjq0d" path="res://Assets/Red Tank Animation/sprite_3.png" id="5_avjaq"]
+[ext_resource type="Texture2D" uid="uid://btrm2yobnqv5r" path="res://Assets/Red Tank Animation/sprite_4.png" id="6_ubeem"]
+[ext_resource type="Texture2D" uid="uid://qgmr8uspm0fo" path="res://Assets/Red Tank Animation/sprite_5.png" id="7_by1g5"]
+[ext_resource type="Texture2D" uid="uid://cct1xpwqtcw5h" path="res://Assets/Red Tank Animation/sprite_6.png" id="8_375uq"]
+[ext_resource type="Texture2D" uid="uid://cnas6rvdh6saf" path="res://Assets/Red Tank Animation/sprite_7.png" id="9_561mn"]
+[ext_resource type="Texture2D" uid="uid://c06la0qp42sm" path="res://Assets/specialBarrel1_outline.png" id="10_wjivu"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bby5t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_dgya6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_1l6ky")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_kbuht")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_avjaq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ubeem")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_by1g5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_375uq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_561mn")
+}],
+"loop": true,
+"name": &"Drive",
+"speed": 24.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dgya6"]
+radius = 40.311287
+
+[node name="PatrollingEnemy" groups=["enemy"] instance=ExtResource("1_x4pat")]
+script = ExtResource("2_1l6ky")
+PathSpeed = 0.1
+BulletScene = ExtResource("3_avjaq")
+ExplosionScene = ExtResource("4_ubeem")
+GunCooldown = 0.75
+
+[node name="TankBody" parent="." index="0"]
+rotation = -1.5707964
+sprite_frames = SubResource("SpriteFrames_bby5t")
+animation = &"Drive"
+
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource("CircleShape2D_dgya6")
+
+[node name="Gun" parent="GunPivot" index="0" groups=["enemy"]]
+position = Vector2(1.5564704, -6.803548e-08)
+rotation = -1.5707964
+scale = Vector2(1, 1.25)
+texture = ExtResource("10_wjivu")
+offset = Vector2(0, 20)
+
+[node name="Muzzle" parent="GunPivot/Gun" index="0"]
+position = Vector2(-2.1855694e-06, 50)

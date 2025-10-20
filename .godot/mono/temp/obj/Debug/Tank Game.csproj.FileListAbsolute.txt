@@ -1,0 +1,17 @@
+C:\Users\NyleT\OneDrive\Documents\Godot\tank-game\.godot\mono\temp\bin\Debug\Tank Game.deps.json
+C:\Users\NyleT\OneDrive\Documents\Godot\tank-game\.godot\mono\temp\bin\Debug\Tank Game.runtimeconfig.json
+C:\Users\NyleT\OneDrive\Documents\Godot\tank-game\.godot\mono\temp\bin\Debug\Tank Game.dll
+C:\Users\NyleT\OneDrive\Documents\Godot\tank-game\.godot\mono\temp\bin\Debug\Tank Game.pdb
+C:\Users\NyleT\OneDrive\Documents\Godot\tank-game\.godot\mono\temp\bin\Debug\GodotSharp.dll
+C:\Users\NyleT\OneDrive\Documents\Godot\tank-game\.godot\mono\temp\bin\Debug\GodotSharpEditor.dll
+C:\Users\NyleT\OneDrive\Documents\Godot\tank-game\.godot\mono\temp\obj\Debug\Tank Game.csproj.AssemblyReference.cache
+C:\Users\NyleT\OneDrive\Documents\Godot\tank-game\.godot\mono\temp\obj\Debug\Tank Game.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\NyleT\OneDrive\Documents\Godot\tank-game\.godot\mono\temp\obj\Debug\Tank Game.AssemblyInfoInputs.cache
+C:\Users\NyleT\OneDrive\Documents\Godot\tank-game\.godot\mono\temp\obj\Debug\Tank Game.AssemblyInfo.cs
+C:\Users\NyleT\OneDrive\Documents\Godot\tank-game\.godot\mono\temp\obj\Debug\Tank Game.csproj.CoreCompileInputs.cache
+C:\Users\NyleT\OneDrive\Documents\Godot\tank-game\.godot\mono\temp\obj\Debug\Tank Game.csproj.Up2Date
+C:\Users\NyleT\OneDrive\Documents\Godot\tank-game\.godot\mono\temp\obj\Debug\Tank Game.dll
+C:\Users\NyleT\OneDrive\Documents\Godot\tank-game\.godot\mono\temp\obj\Debug\refint\Tank Game.dll
+C:\Users\NyleT\OneDrive\Documents\Godot\tank-game\.godot\mono\temp\obj\Debug\Tank Game.pdb
+C:\Users\NyleT\OneDrive\Documents\Godot\tank-game\.godot\mono\temp\obj\Debug\Tank Game.genruntimeconfig.cache
+C:\Users\NyleT\OneDrive\Documents\Godot\tank-game\.godot\mono\temp\obj\Debug\ref\Tank Game.dll

@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://dkvcyas7mn1oq"]
+
+[ext_resource type="Script" uid="uid://b062vndmsf4mh" path="res://Bullet.cs" id="1_nnlih"]
+[ext_resource type="PackedScene" uid="uid://coixifbsut28u" path="res://blue_smoke.tscn" id="2_18yi1"]
+[ext_resource type="Texture2D" uid="uid://bmmllra0dpffr" path="res://Assets/bulletBlue1_outline.png" id="3_bvwda"]
+[ext_resource type="AudioStream" uid="uid://doycsduvyamj5" path="res://Assets/Audio/IMP_METAL_CRACK1.WAV" id="4_18yi1"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v8qja"]
+height = 34.0
+
+[node name="PlayerBullet" type="CharacterBody2D" groups=["bullet"]]
+position = Vector2(92, 71)
+script = ExtResource("1_nnlih")
+Speed = 300
+SmokeScene = ExtResource("2_18yi1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 1.5707964
+texture = ExtResource("3_bvwda")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_v8qja")
+
+[node name="VisibilityNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+rotation = 1.5707964
+rect = Rect2(-10, -14, 20, 28)
+
+[node name="Impact1" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_18yi1")
+volume_db = -12.0
+
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

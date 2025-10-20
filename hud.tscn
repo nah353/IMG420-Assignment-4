@@ -1,0 +1,67 @@
+[gd_scene load_steps=5 format=3 uid="uid://b063ckb34gi5w"]
+
+[ext_resource type="Script" uid="uid://bnemm663erta" path="res://HUD.cs" id="1_8sq4i"]
+[ext_resource type="Texture2D" uid="uid://bik2ytrjy8h25" path="res://Assets/tank_blue.png" id="1_64ctp"]
+[ext_resource type="FontFile" uid="uid://tvmrayww2tjh" path="res://Assets/Fonts/Kenney Future.ttf" id="2_8sq4i"]
+[ext_resource type="PackedScene" uid="uid://crlvhrwo0gfpv" path="res://main.tscn" id="2_640wx"]
+
+[node name="HUD" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_8sq4i")
+MainScene = ExtResource("2_640wx")
+
+[node name="TankTexture" type="TextureRect" parent="."]
+offset_left = 16.0
+offset_top = 64.0
+offset_right = 100.0
+offset_bottom = 156.0
+texture = ExtResource("1_64ctp")
+stretch_mode = 4
+
+[node name="LivesRemaining" type="Label" parent="TankTexture"]
+layout_mode = 0
+offset_left = 108.0
+offset_top = 5.0
+offset_right = 268.0
+offset_bottom = 59.0
+theme_override_constants/outline_size = 16
+theme_override_fonts/font = ExtResource("2_8sq4i")
+theme_override_font_sizes/font_size = 48
+text = "?"
+
+[node name="LivesLabel" type="Label" parent="TankTexture"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = -56.0
+offset_right = 194.0
+offset_bottom = -2.0
+theme_override_constants/outline_size = 16
+theme_override_fonts/font = ExtResource("2_8sq4i")
+theme_override_font_sizes/font_size = 48
+text = "Lives:"
+
+[node name="Message" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = -27.0
+offset_right = 120.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 16
+theme_override_fonts/font = ExtResource("2_8sq4i")
+theme_override_font_sizes/font_size = 48
+text = "Ready?"
+horizontal_alignment = 1
+
+[node name="StartTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="EndTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
