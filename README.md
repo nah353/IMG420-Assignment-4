@@ -6,6 +6,8 @@ Goal: Destroy the enemy tank while avoiding its attacks! If you collide with an 
 
 Animations include tank treads cycling when driving.
 
+An enemy tank on Level 2 chases the player with NavigationAgent2D, and will take all of the player's lives upon contact.
+
 Make sure to run the main (main.tscn) scene to play the game.
 
 Built and ran in Godot version `4.5.beta`
